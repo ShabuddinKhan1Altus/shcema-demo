@@ -1,7 +1,5 @@
 {
   "definitions": {},
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://example.com/object1689588682.json",
   "title": "Root",
   "type": "object",
   "required": [
