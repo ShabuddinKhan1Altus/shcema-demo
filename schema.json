@@ -1,215 +1,130 @@
 {
-	"definitions": {},
-	"$schema": "http://json-schema.org/draft-07/schema#", 
-	"$id": "https://example.com/object1689595027.json", 
-	"title": "Root", 
-	"type": "object",
-	"required": [
-		"environment_variables",
-		"azurerm_storage_account"
-	],
-	"properties": {
-		"environment_variables": {
-			"$id": "#root/environment_variables", 
-			"title": "Environment_variables", 
-			"type": "object",
-			"required": [
-				"subscription_id",
-				"azure_region",
-				"container_name",
-				"storage_name",
-				"state_resource_group",
-				"region_short_name",
-				"project",
-				"env"
-			],
-			"properties": {
-				"subscription_id": {
-					"$id": "#root/environment_variables/subscription_id", 
-					"title": "Subscription_id", 
-					"type": "string",
-					"default": "",
-					"examples": [
-						"ef6d3d46-3bdb-455b-92db-4d187d3ee979"
-					],
-					"pattern": "^.*$"
-				},
-				"azure_region": {
-					"$id": "#root/environment_variables/azure_region", 
-					"title": "Azure_region", 
-					"type": "string",
-					"default": "",
-					"examples": [
-						"North Europe"
-					],
-					"pattern": "^.*$"
-				},
-				"container_name": {
-					"$id": "#root/environment_variables/container_name", 
-					"title": "Container_name", 
-					"type": "string",
-					"default": "",
-					"examples": [
-						"statefiles"
-					],
-					"pattern": "^.*$"
-				},
-				"storage_name": {
-					"$id": "#root/environment_variables/storage_name", 
-					"title": "Storage_name", 
-					"type": "string",
-					"default": "",
-					"examples": [
-						"stigsenpeunotf01"
-					],
-					"pattern": "^.*$"
-				},
-				"state_resource_group": {
-					"$id": "#root/environment_variables/state_resource_group", 
-					"title": "State_resource_group", 
-					"type": "string",
-					"default": "",
-					"examples": [
-						"rg-gse-np-euno-devops-01"
-					],
-					"pattern": "^.*$"
-				},
-				"region_short_name": {
-					"$id": "#root/environment_variables/region_short_name", 
-					"title": "Region_short_name", 
-					"type": "string",
-					"default": "",
-					"examples": [
-						"euno"
-					],
-					"pattern": "^.*$"
-				},
-				"project": {
-					"$id": "#root/environment_variables/project", 
-					"title": "Project", 
-					"type": "string",
-					"default": "",
-					"examples": [
-						"gse"
-					],
-					"pattern": "^.*$"
-				},
-				"env": {
-					"$id": "#root/environment_variables/env", 
-					"title": "Env", 
-					"type": "string",
-					"default": "",
-					"examples": [
-						"np"
-					],
-					"pattern": "^.*$"
-				}
-			}
-		}
-,
-		"azurerm_storage_account": {
-			"$id": "#root/azurerm_storage_account", 
-			"title": "Azurerm_storage_account", 
-			"type": "array",
-			"default": [],
-			"items":{
-				"$id": "#root/azurerm_storage_account/items", 
-				"title": "Items", 
-				"type": "object",
-				"required": [
-					"resource_group_name",
-					"location",
-					"name",
-					"account_kind",
-					"account_tier",
-					"account_replication_type",
-					"public_network_access_enabled",
-					"tags"
-				],
-				"properties": {
-					"resource_group_name": {
-						"$id": "#root/azurerm_storage_account/items/resource_group_name", 
-						"title": "Resource_group_name", 
-						"type": "string",
-						"default": "",
-						"examples": [
-							""
-						],
-						"pattern": "^.*$"
-					},
-					"location": {
-						"$id": "#root/azurerm_storage_account/items/location", 
-						"title": "Location", 
-						"type": "string",
-						"default": "",
-						"examples": [
-							""
-						],
-						"pattern": "^.*$"
-					},
-					"name": {
-						"$id": "#root/azurerm_storage_account/items/name", 
-						"title": "Name", 
-						"type": "string",
-						"default": "",
-						"examples": [
-							""
-						],
-						"pattern": "^.*$"
-					},
-					"account_kind": {
-						"$id": "#root/azurerm_storage_account/items/account_kind", 
-						"title": "Account_kind", 
-						"type": "string",
-						"default": "",
-						"examples": [
-							""
-						],
-						"pattern": "^.*$"
-					},
-					"account_tier": {
-						"$id": "#root/azurerm_storage_account/items/account_tier", 
-						"title": "Account_tier", 
-						"type": "string",
-						"default": "",
-						"examples": [
-							""
-						],
-						"pattern": "^.*$"
-					},
-					"account_replication_type": {
-						"$id": "#root/azurerm_storage_account/items/account_replication_type", 
-						"title": "Account_replication_type", 
-						"type": "string",
-						"default": "",
-						"examples": [
-							""
-						],
-						"pattern": "^.*$"
-					},
-					"public_network_access_enabled": {
-						"$id": "#root/azurerm_storage_account/items/public_network_access_enabled", 
-						"title": "Public_network_access_enabled", 
-						"type": "string",
-						"default": "",
-						"examples": [
-							""
-						],
-						"pattern": "^.*$"
-					},
-					"tags": {
-						"$id": "#root/azurerm_storage_account/items/tags", 
-						"title": "Tags", 
-						"type": "object",
-						"required": [
-						],
-						"properties": {
-						}
-					}
-
-				}
-			}
-
-		}
-	}
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "environmentVariables": {
+            "type": "object",
+            "properties": {
+                "env": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "object",
+                    "properties": {
+                        "project": {
+                            "type": "string"
+                        },
+                        "scope": {
+                            "type": "string"
+                        },
+                        "env": {
+                            "type": "string"
+                        },
+                        "owner": {
+                            "type": "string"
+                        },
+                        "createdBy": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "project",
+                        "scope",
+                        "env",
+                        "owner",
+                        "createdBy"
+                    ]
+                },
+                "devOpsStorageAcc": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "env",
+                "tags",
+                "devOpsStorageAcc"
+            ]
+        },
+        "management_groups": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "resource_group_name": {
+                            "type": "string"
+                        },
+                        "azure_region": {
+                            "type": "string"
+                        },
+                        "region_short_name": {
+                            "type": "string"
+                        },
+                        "resource_description": {
+                            "type": "string"
+                        },
+                        "project": {
+                            "type": "string"
+                        },
+                        "env": {
+                            "type": "string"
+                        },
+                        "instance": {
+                            "type": "string"
+                        },
+                        "tags": {
+                            "type": "object",
+                            "properties": {
+                                "Application_Name": {
+                                    "type": "string"
+                                },
+                                "Business_Unit": {
+                                    "type": "string"
+                                },
+                                "Cost_Center": {
+                                    "type": "string"
+                                },
+                                "Environment": {
+                                    "type": "string"
+                                },
+                                "Resource_Owner": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "Application_Name",
+                                "Business_Unit",
+                                "Cost_Center",
+                                "Environment",
+                                "Resource_Owner"
+                            ]
+                        },
+                        "root_management_group_name": {
+                            "type": "string"
+                        },
+                        "management_group_subscriptions": {
+                            "type": "array",
+                            "items": {}
+                        }
+                    },
+                    "required": [
+                        "resource_group_name",
+                        "azure_region",
+                        "region_short_name",
+                        "resource_description",
+                        "project",
+                        "env",
+                        "instance",
+                        "tags",
+                        "root_management_group_name",
+                        "management_group_subscriptions"
+                    ]
+                }
+            ]
+        }
+    },
+    "required": [
+        "environmentVariables",
+        "management_groups"
+    ]
 }
