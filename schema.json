@@ -121,10 +121,51 @@
                     ]
                 }
             ]
+        },
+        "resource_groups": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "resource_group_name": {
+                            "type": "string"
+                        },
+                        "azure_region": {
+                            "type": "string"
+                        },
+                        "region_short_name": {
+                            "type": "string"
+                        },
+                        "resource_description": {
+                            "type": "string"
+                        },
+                        "project": {
+                            "type": "string"
+                        },
+                        "env": {
+                            "type": "string"
+                        },
+                        "instance": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "resource_group_name",
+                        "azure_region",
+                        "region_short_name",
+                        "resource_description",
+                        "project",
+                        "env",
+                        "instance"
+                    ]
+                }
+            ]
         }
     },
     "required": [
         "environmentVariables",
-        "management_groups"
+        "management_groups",
+        "resource_groups"
     ]
 }
